@@ -1,0 +1,24 @@
+.holder{
+  position: relative;
+  padding-bottom: 50px;
+
+    #count-numbers{
+      width: 100%;
+      border-radius: 16px;
+      padding: 16px;
+      font-size: 1.5rem;
+      min-height: 350px;
+    }
+
+    .counter{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+
+      &.max{
+        color: red;
+      }
+    }
+}
