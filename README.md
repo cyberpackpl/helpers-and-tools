@@ -3,14 +3,11 @@
 For everyone interested.
 
 ## Info
-Each tool NEED to be asign to specific category, and be placed in coresponding folder. For example. "Count words" goes to "text", "Calculate moon distanse" goes go "calculator"
-
-
+Each tool NEED to be assigned to specific category, and be placed in corresponding folder. For example. "Count words" goes to "text", "Calculate moon distance" goes go "calculator"
 
 ## TOOLS
 ### Available tools
 * `text/word-counter` - Counts words
-
 
 ## INTEGRATION
 ### Wordpress
