@@ -8,7 +8,7 @@
 */
 
 add_shortcode( 'cbp_tool', function ($atts) {
-  if (!defined('TOOLS')): define('TOOLS', '/wp-content/tools') endif;
+  if (!defined('TOOLS')): define('TOOLS', '/wp-content/tools'); endif;
   wp_enqueue_style( 'cbp_tool-style', TOOLS.'/assets/style.css', [], '0.1' );
   wp_enqueue_script( 'cbp_tool-scripts', TOOLS.'/assets/scripts.js', [], '0.1', $footer = true );
 
@@ -16,16 +16,13 @@ add_shortcode( 'cbp_tool', function ($atts) {
 
   if ($atts['tool'] == 'all') {
     $files = [];
-    $path = scandir(ABSPATH.'wp-content/tools/src/');
-    foreach (array_splice($path, 2) as $cat) {
-      $path = scandir(ABSPATH . "wp-content/tools/src/" . $cat);
-      $files[$cat] = array_splice($path, 2);
+    $path = ABSPATH.'wp-content/tools/src/';
+    foreach (glob($path.'{*/*,*/*/*}.html',GLOB_BRACE) as $file) {
+      $files[] = str_replace( [$path, '/index.html'], '', $file );
     }
     $html = '<ul>';
-    foreach ($files as $cat => $file) {
-      foreach ($file as $single) {
-        $html .= "<li>{$cat}/{$single}</li>";
-      }
+    foreach ($files as $file) {
+      $html .= "<li>{$file}</li>";
     }
     $html .= '</ul>';
   } else {
