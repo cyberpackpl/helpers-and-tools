@@ -1,7 +1,7 @@
 {
-    "name": "Word counter",
-    "author": "Adam - Cyberpack",
-    "updated": "2026-04-13",
+    "name": "text-analyzer",
+    "author": "Adam Lechowicz",
+    "updated": "2026-04-28",
     "version": "1.0.0",
     "with_AI": false,
     "sends_data": false,

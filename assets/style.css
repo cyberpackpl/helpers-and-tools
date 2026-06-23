@@ -1,3 +1,18 @@
+.btn {
+  font-size: 2rem;
+  padding-block: 12px;
+  padding-inline: 16px;
+  background: transparent;
+  border: solid 2px #e20613;
+  border-radius: 20px;
+  width: fit-content;
+  transition-duration: 0.4s;
+  cursor: pointer;
+} 
+
+.btn:hover {
+  background: #b6b6b6;
+}
 .cbp-tool {
   background-color: var(--background, purple);
 
